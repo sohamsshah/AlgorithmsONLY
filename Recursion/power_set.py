@@ -20,6 +20,8 @@ def solve(input, output):
     solve(input, output2)
     
 solve(arr, [])
+
+print(ans)
     
     
         
