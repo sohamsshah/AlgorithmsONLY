@@ -5,6 +5,8 @@ Created on Mon Oct  5 21:51:50 2020
 @author: Soham Shah
 """
 
+# Power Set generation
+
 arr = [1,2,3,4]
 ans = []
 def solve(input, output):

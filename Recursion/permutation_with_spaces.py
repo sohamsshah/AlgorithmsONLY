@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+# Permutation with Spaces
+
 string = "ABC"
 ans = []
 
