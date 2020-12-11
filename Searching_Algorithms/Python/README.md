@@ -117,13 +117,53 @@ Refer: GFG, Aditya Verma, LeetCode
 
 ---
 
+### 8. [Floor and Ceil of an Element in a Sorted Array](https://www.geeksforgeeks.org/floor-in-a-sorted-array/)
+Problem: Return Floor and Ceil of a particular element in a given Sorted Array. Floor of an element means: Greatest Element smaller than i. Ceil of an element means: Smallest Element greater than i. 
+Logic: If we find the element in the array, return it. 
 
+Floor: While going right, store the element at *mid* in a res variable. 
+Ceil: While going left, store the element at *mid* in a res variable.
+Return res.
 
+To solve it in O(logn) complexity, we follow the following algorithm.
 
+**Algorithm**:
 
+Floor: 
 
+1. if arr[mid] == key: return arr[mid]
+2. if arr[mid] < key: res = arr[mid]; start = mid+1
+3. if arr[mid] > key: end = mid-1 
+4. return res
 
+Ceil: 
 
+1. if arr[mid] == key: return arr[mid]
+2. if arr[mid] > key: res = arr[mid]; end = mid-1
+3. if arr[mid] < key: mid = mid+1 
+4. return res
+
+Complexity: O(logn)
+
+Refer: GFG, Aditya Verma
+
+---
+
+### 9. [Next Alphabetical Letter Problem](https://www.youtube.com/watch?v=X45c37QMdX0&list=PL_z_8CaSLPWeYfhtuKHj-9MpYb6XQJ_f2&index=12)
+Problem: Return the next alphabet greater than x from the given sorted array.
+Logic: It is similar to ceil of a number problem. But here, if arr[mid] == x; we still have to find the next alphabet rather than returning. So, we have to just update start variable. To solve it in O(logn) complexity, we follow the following algorithm.
+
+**Algorithm**:
+1. if arr[mid] == key: start = mid+1
+2. if arr[mid] > key: res = arr[mid]; end = mid-1
+3. if arr[mid] < key: mid = mid+1 
+4. return res
+
+Complexity: O(logn)
+
+Refer: GFG, Aditya Verma, LeetCode
+
+---
 
 
 
