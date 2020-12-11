@@ -64,6 +64,63 @@ Complexity: O(logn)
 
 Refer: GFG, Aditya Verma
 
+---
+
+### 5. [Number of times a Sorted Array is Rotated](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array)
+Problem: Return number of times a sorted array is rotated. 
+Logic: The Pivot element is actually at the index of minimum value of the array. The minimum value will be smaller than both its neighbors. Since array is rotated, the array is unsorted. If we find mid, then one half will be unsorted, while other half will be sorted. We have to consider only the unsorted part as the minimum element will be there. To solve it in O(logn) complexity, we follow the following algorithm.
+
+**Algorithm**:
+1. Find mid = (start+end)/2
+2. nxt = (mid+1)%n, prev = (mid-1+n)%n
+3. Return arr[mid], if nums[mid]<=nums[prev]
+4. Return arr[mid+1], if nums[mid]>=nums[nxt]
+5. Else, go towards unsorted part.
+6. if nums[mid] >= nums[l]: l = mid + 1 
+   elif nums[mid] <= nums[r]: r = mid - 1
+
+Complexity: O(logn)
+
+Refer: GFG, Aditya Verma, LeetCode
+
+---
+
+### 6. [Find an Element in a Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
+Problem: Return index of a particular element in a given Sorted Array (Search operation) 
+Logic: To solve it in O(logn) complexity, we follow the following algorithm.
+
+**Algorithm**:
+1. Find the index of Pivot Element (from where the Array is rotated); store as pivot.
+2. Apply Binary Search in both halves.
+3. BS(arr, 0, pivot-1, key) 
+   BS(arr, pivot, n-1, key)
+
+Complexity: O(logn)
+
+Refer: GFG, Aditya Verma, LeetCode
+
+---
+
+### 7. [Search in a nearly Rotated Sorted Array](https://www.geeksforgeeks.org/search-almost-sorted-array/)
+Problem: Return index of a particular element in a given Nearly Sorted Array (Search operation). In a Nearly Sorted array, arr[i] may be present at arr[i+1] or arr[i-1].
+Logic: At each arr[mid] search, we also look for indices arr[mid+1] and arr[mid-1]. We take for edge conditions so that it doesnt go out of bound. Instead of updating start and end pointers by one unit from *mid*, here we update by +2 or -2. To solve it in O(logn) complexity, we follow the following algorithm.
+
+**Algorithm**:
+1. if arr[mid] == key: return mid.
+2. if mid>=l and arr[mid-1] == k: return mid-1
+3. if mid <=r and arr[mid+1] ==k: return mid+1 
+4. if mid > k: r = mid-2; elif mid < k: l = mid+2
+
+Complexity: O(logn)
+
+Refer: GFG, Aditya Verma, LeetCode
+
+---
+
+
+
+
+
 
 
 
