@@ -2,6 +2,7 @@
 
 ### 1. [Binary Search](https://practice.geeksforgeeks.org/problems/binary-search-1587115620/1/?track=dsa-workshop-1-search-sort&batchId=308)
 Problem: Search for x in a List 
+
 Logic: To solve it in O(logn) complexity, we follow the following algorithm.
 
 **Algorithm**:
@@ -19,6 +20,7 @@ Refer: GFG, Aditya Verma
 
 ### 2. [Binary Search in descending Array](https://www.youtube.com/watch?v=YbkELwnGRdo&list=PL_z_8CaSLPWeYfhtuKHj-9MpYb6XQJ_f2&index=3)
 Problem: Search for x in a List that is sorted in Descending order. 
+
 Logic: To solve it in O(logn) complexity, we follow the following algorithm.
 
 **Algorithm**:
@@ -53,6 +55,7 @@ Refer: GFG, LeetCode, Aditya Verma
 
 ### 4. [Count of an element in a Sorted Array](https://www.geeksforgeeks.org/count-number-of-occurrences-or-frequency-in-a-sorted-array/)
 Problem: Return number of count of a particular element in a given Sorted Array. 
+
 Logic: To solve it in O(logn) complexity, we follow the following algorithm.
 
 **Algorithm**:
@@ -68,6 +71,7 @@ Refer: GFG, Aditya Verma
 
 ### 5. [Number of times a Sorted Array is Rotated](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array)
 Problem: Return number of times a sorted array is rotated. 
+
 Logic: The Pivot element is actually at the index of minimum value of the array. The minimum value will be smaller than both its neighbors. Since array is rotated, the array is unsorted. If we find mid, then one half will be unsorted, while other half will be sorted. We have to consider only the unsorted part as the minimum element will be there. To solve it in O(logn) complexity, we follow the following algorithm.
 
 **Algorithm**:
@@ -87,6 +91,7 @@ Refer: GFG, Aditya Verma, LeetCode
 
 ### 6. [Find an Element in a Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
 Problem: Return index of a particular element in a given Sorted Array (Search operation) 
+
 Logic: To solve it in O(logn) complexity, we follow the following algorithm.
 
 **Algorithm**:
@@ -103,6 +108,7 @@ Refer: GFG, Aditya Verma, LeetCode
 
 ### 7. [Search in a nearly Rotated Sorted Array](https://www.geeksforgeeks.org/search-almost-sorted-array/)
 Problem: Return index of a particular element in a given Nearly Sorted Array (Search operation). In a Nearly Sorted array, arr[i] may be present at arr[i+1] or arr[i-1].
+
 Logic: At each arr[mid] search, we also look for indices arr[mid+1] and arr[mid-1]. We take for edge conditions so that it doesnt go out of bound. Instead of updating start and end pointers by one unit from *mid*, here we update by +2 or -2. To solve it in O(logn) complexity, we follow the following algorithm.
 
 **Algorithm**:
@@ -119,6 +125,7 @@ Refer: GFG, Aditya Verma, LeetCode
 
 ### 8. [Floor and Ceil of an Element in a Sorted Array](https://www.geeksforgeeks.org/floor-in-a-sorted-array/)
 Problem: Return Floor and Ceil of a particular element in a given Sorted Array. Floor of an element means: Greatest Element smaller than i. Ceil of an element means: Smallest Element greater than i. 
+
 Logic: If we find the element in the array, return it. 
 
 Floor: While going right, store the element at *mid* in a res variable. 
@@ -151,6 +158,7 @@ Refer: GFG, Aditya Verma
 
 ### 9. [Next Alphabetical Letter Problem](https://www.youtube.com/watch?v=X45c37QMdX0&list=PL_z_8CaSLPWeYfhtuKHj-9MpYb6XQJ_f2&index=12)
 Problem: Return the next alphabet greater than x from the given sorted array.
+
 Logic: It is similar to ceil of a number problem. But here, if arr[mid] == x; we still have to find the next alphabet rather than returning. So, we have to just update start variable. To solve it in O(logn) complexity, we follow the following algorithm.
 
 **Algorithm**:
@@ -167,6 +175,7 @@ Refer: GFG, Aditya Verma, LeetCode
 
 ### 10. [Find Position of an Element in an Infinite Sorted Array](https://www.youtube.com/watch?v=FzvK5uuaki8&list=PL_z_8CaSLPWeYfhtuKHj-9MpYb6XQJ_f2&index=13)
 Problem: Search an element in an infinite sorted array.
+
 Logic: An Element is always bound by start <= ele <= end. Here, we take start=0, end=1. We increment end by a factor of 2 till we find arr[end] > key. We assign start=end+1 at every iteration. Once this condition statisfies, we perform normal Binary Search between start and end indices. To solve it in O(logn) complexity, we follow the following algorithm.
 
 **Algorithm**:
