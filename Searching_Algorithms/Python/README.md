@@ -49,6 +49,21 @@ Complexity: O(logn)
 
 Refer: GFG, LeetCode, Aditya Verma
 
+---
+
+### 4. [Count of an element in a Sorted Array](https://www.geeksforgeeks.org/count-number-of-occurrences-or-frequency-in-a-sorted-array/)
+Problem: Return number of count of a particular element in a given Sorted Array. 
+Logic: To solve it in O(logn) complexity, we follow the following algorithm.
+
+**Algorithm**:
+1. Find the index of First Occurence of the element; store as first.
+2. Find the index of First Occurence of the element; store as last.
+3. Return (last-first)+1
+
+Complexity: O(logn)
+
+Refer: GFG, Aditya Verma
+
 
 
 
