@@ -12,6 +12,7 @@ Logic: To solve it in O(logn) complexity, we follow the following algorithm.
 5. if arr[mid] < key: start = mid+1 else: end = mid-1
 
 Complexity: O(logn)
+
 Refer: GFG, Aditya Verma
 
 ---
@@ -28,6 +29,7 @@ Logic: To solve it in O(logn) complexity, we follow the following algorithm.
 5. if arr[mid] > key: start = mid+1 else: end = mid-1
 
 Complexity: O(logn)
+
 Refer: GFG, Aditya Verma
 
 ---
@@ -44,6 +46,7 @@ Logic: The idea is that since the list is sorted, the first occurence of the ele
 3. Elsewhere, do normal Binary Search.
 
 Complexity: O(logn)
+
 Refer: GFG, LeetCode, Aditya Verma
 
 
