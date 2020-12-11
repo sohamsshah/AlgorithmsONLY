@@ -165,6 +165,23 @@ Refer: GFG, Aditya Verma, LeetCode
 
 ---
 
+### 10. [Find Position of an Element in an Infinite Sorted Array](https://www.youtube.com/watch?v=FzvK5uuaki8&list=PL_z_8CaSLPWeYfhtuKHj-9MpYb6XQJ_f2&index=13)
+Problem: Search an element in an infinite sorted array.
+Logic: An Element is always bound by start <= ele <= end. Here, we take start=0, end=1. We increment end by a factor of 2 till we find arr[end] > key. We assign start=end+1 at every iteration. Once this condition statisfies, we perform normal Binary Search between start and end indices. To solve it in O(logn) complexity, we follow the following algorithm.
+
+**Algorithm**:
+1. start, end = 0,1
+2. while arr[end] < key: start = end+1; end*=2
+3. BS(arr, start, end, key)
+
+Complexity: O(logn)
+
+Refer: GFG, Aditya Verma
+
+---
+
+
+
 
 
 
