@@ -108,6 +108,79 @@ Complexity: O(n)
 
 Refer: GFG
 
+---
+
+## 5. [Leaders in an Array](https://www.geeksforgeeks.org/leaders-in-an-array/)
+
+Problem: Return the leader in an array.
+
+Logic: Element is a leader if it is greater than or equal to all the elements on its right side. So we start from the end of the array. Keep iterating and adding to a new array called leaders by checking and keeping track of *right maximum* variable.
+
+Refer: GFG, LeetCode
+
+---
+
+## 5. [Convert to a Wave](https://www.geeksforgeeks.org/sort-array-wave-form-2/)
+
+Problem: Given an unsorted array of integers, sort the array into a wave like array. An array ‘arr[0..n-1]’ is sorted in wave form if arr[0] >= arr[1] <= arr[2] >= arr[3] <= arr[4] >= …..
+
+Logic: swap(i,i+1) and jump index by +2
+
+Refer: GFG
+
+---
+
+## 6. [Subarray with a given sum with NO NEGATIVE VALUES](https://www.geeksforgeeks.org/find-subarray-with-given-sum/)
+
+Problem: Given an unsorted array of nonnegative integers, find a continuous subarray which adds to a given number.
+
+Logic: Since there are no negative values, we can linearly iterate through the array and follow the algorithm. While low <= high, we check if current sum == sum. If it matches, return (low, high). Else, if current sum > sum, decrement current sum by arr[low]. 
+
+```
+def subArraySum(arr, n, sum): 
+    low = 0 
+    high = 0
+    curr_sum = arr[low]
+    
+    while low <= high and high <= n - 1:
+        if curr_sum == sum:
+            print(low,high)
+        elif curr_sum < sum:
+            high = high + 1
+            curr_sum = curr_sum + arr[high]
+        else:
+            curr_sum = curr_sum - arr[low]
+            
+    print(-1)
+```
+
+Refer: GFG
+
+---
+
+## 7. [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)
+
+Problem: Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining.
+
+Logic: Calculate sum(min(left_max[i], right_max[i]). Make prefix sum arrays for left_max and right_max arrays.
+
+Example: 
+
+<img src="https://assets.leetcode.com/uploads/2018/10/22/rainwatertrap.png">
+
+Input: height = [0,1,0,2,1,0,1,3,2,1,2,1]
+
+Output: 6
+
+Explanation: The above elevation map (black section) is represented by array [0,1,0,2,1,0,1,3,2,1,2,1]. In this case, 6 units of rain water (blue section) are being trapped.
+
+Refer: LeetCode , GFG
+
+---
+
+
+
+
 
 
 
