@@ -55,3 +55,26 @@ Space: O(1)
 Refer: GFG, LeetCode
 
 ---
+
+### 2. [Reverse Array](https://www.geeksforgeeks.org/write-a-program-to-reverse-an-array-or-string/)
+
+Problem: Return a reversed array.
+
+* #### Approach 1:
+
+Logic: Use temporary array and pop all the elements from primary array to that. Return it.
+
+Complexity: O(n)
+Space: O(n)
+
+* #### Approach 2:
+
+Logic: Take two pointers start and end at 0th and n-1th index respectively. Swap (start, end), increment them until middle element is reached. 
+
+* #### Approach 3:
+
+Logic: Use Recursion to solve this. If start >= end, return. Else, keep swapping the start and end and recursively calling the function on start+1 and end-1 indices.
+Complexity: O(n)
+Space: O(1)
+
+
