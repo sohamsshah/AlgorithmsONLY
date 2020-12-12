@@ -74,7 +74,41 @@ Logic: Take two pointers start and end at 0th and n-1th index respectively. Swap
 * #### Approach 3:
 
 Logic: Use Recursion to solve this. If start >= end, return. Else, keep swapping the start and end and recursively calling the function on start+1 and end-1 indices.
+
 Complexity: O(n)
 Space: O(1)
+
+Refer: GFG, LeetCode
+
+
+---
+
+## 3. [Range Sum Queries](https://www.geeksforgeeks.org/range-sum-queries-without-updates/)
+
+Problem: Finding sum in a range. 
+
+Logic: Use Prefix Sum Array to solve this. It takes O(n) time and O(n) space to crate it. But once made, can tackle multiple queries in O(1).
+
+Complexity: O(n)
+Space: O(n)
+Time for queries: O(1)
+
+Refer: GFG
+
+---
+
+
+## 4. [Equilibrium Point in an Array](https://www.geeksforgeeks.org/equilibrium-index-of-an-array/)
+
+Problem: Return Equilibrium index of an array.
+
+Logic: Equilibrium index is an index where the sum of all values on left of it and sum of all values on right of it is equal. First, we calculate total sum. Then we iterate through the array, calculate the left sum and update. At each iteration, we check if left sum == (total - left sum - A[i]). If we find such index, we return it.
+
+Complexity: O(n)
+
+Refer: GFG
+
+
+
 
 
