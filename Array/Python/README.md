@@ -178,6 +178,52 @@ Refer: LeetCode , GFG
 
 ---
 
+## 8. [Rearrange in Min-max Form from a Sorted Array](https://www.geeksforgeeks.org/rearrange-array-maximum-minimum-form-set-2-o1-extra-space/)
+
+Problem: Given a sorted array of positive integers, rearrange the array alternately i.e first element should be the maximum value, second minimum value, third-second max, fourth-second min and so on.
+
+Logic: 
+
+For Even indices - Pop from TOP and append to the array.
+
+For Odd indices -  Pop from n-1 and append. Decrement n after each otheration so it always points to the right value.
+
+Refer: GFG
+
+---
+
+## 9. [Kadane's Algorithm](https://www.geeksforgeeks.org/largest-sum-contiguous-subarray/)
+
+Problem: Write an efficient program to find the sum of contiguous subarray within a one-dimensional array of numbers which has the largest sum.
+
+Logic: Simple idea of the Kadane’s algorithm is to look for all positive contiguous segments of the array (max_ending_here is used for this). And keep track of maximum sum contiguous segment among all positive segments (max_so_far is used for this). Each time we get a positive sum compare it with max_so_far and update max_so_far if it is greater than max_so_far.
+
+Kadane's Algorithm:
+
+```
+Initialize:
+    max_so_far = 0
+    max_ending_here = 0
+
+Loop for each element of the array
+  (a) max_ending_here = max_ending_here + a[i]
+  (b) if(max_so_far < max_ending_here)
+            max_so_far = max_ending_here
+  (c) if(max_ending_here < 0)
+            max_ending_here = 0
+return max_so_far
+```
+Complexity: O(n)
+
+Refer: GFG
+
+---
+
+
+     
+
+
+
 
 
 
