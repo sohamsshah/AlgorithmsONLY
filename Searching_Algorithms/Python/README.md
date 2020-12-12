@@ -190,6 +190,38 @@ Refer: GFG, Aditya Verma
 ---
 
 
+### 11. [Find the peak element in an Array]()
+Problem: Search for the peak element in an unsorted array. Peak element is an element that is greater than both its neighbors. An element arr[i] is a peak element if arr[i] > arr[i-1] && arr[i] > arr[i+1].
+
+Logic: We check for element at mid. If arr[mid] satisfies the condition return. Else, we go the side where there is a chance for a peak element. That is, if arr[mid+1] > arr[i], then we move towards right side; start = mid+1. Similarly, if arr[mid-1] > arr[mid] then we go towards left; end = mid-1. To solve it in O(logn) complexity, we follow the following algorithm. For arr[0] and arr[n-1], check condition explicitly.
+
+**Algorithm**:
+1. if arr[mid] >= arr[mid+1] and arr[mid] >= arr[mid-1]: return mid
+2. elif arr[mid+1] > arr[mid]: l = mid+1; else: r = mid-1
+3. Check for corner elements explicitly.
+
+Complexity: O(logn)
+
+Refer: GFG, Aditya Verma
+
+---
+
+### 11. [Find the peak element in an Array](https://leetcode.com/problems/find-peak-element/)
+Problem: Search for the peak element in an unsorted array. Peak element is an element that is greater than both its neighbors. An element arr[i] is a peak element if arr[i] > arr[i-1] && arr[i] > arr[i+1].
+
+Logic: We check for element at mid. If arr[mid] satisfies the condition return. Else, we go the side where there is a chance for a peak element. That is, if arr[mid+1] > arr[i], then we move towards right side; start = mid+1. Similarly, if arr[mid-1] > arr[mid] then we go towards left; end = mid-1. To solve it in O(logn) complexity, we follow the following algorithm. For arr[0] and arr[n-1], check condition explicitly.
+
+**Algorithm**:
+1. if arr[mid] >= arr[mid+1] and arr[mid] >= arr[mid-1]: return mid
+2. elif arr[mid+1] > arr[mid]: l = mid+1; else: r = mid-1
+3. Check for corner elements explicitly.
+
+Complexity: O(logn)
+
+Refer: GFG, Aditya Verma
+
+---
+
 
 
 
